@@ -3,12 +3,17 @@ import pandas as pd
 import sys
 import numpy as np
 from os import path
+import shutil
 
-# Get student name
-try:
-    student_name = sys.argv[1].title()
-except IndexError:
-    student_name = 'Sample'
+# Initiation: possibly create new student or if not, get name
+if sys.argv[1] == 'create':
+    student_name = sys.argv[2].title()
+    shutil.copy(src = 'Students/Copy.csv', dst = f'Students/{student_name}.csv')
+else:
+    try:
+        student_name = sys.argv[1].title()
+    except IndexError:
+        student_name = 'Sample'
 
 # Check is student is existing valid
 while not path.exists(f'Students/{student_name}.csv'):
@@ -28,6 +33,7 @@ def save_data(data: pd.DataFrame, student: str = student_name):
     data.to_csv(f'Students/{student}.csv')
 
 def save_plot(data: pd.DataFrame, student: str = student_name):
+    """Takes a DataFrame and saves a student's data to Graphs folder."""
     fig, ax = plt.subplots()
     plt.style.use('fivethirtyeight')
     ax.set_title(f'Note Reading Accuracy: {student}')

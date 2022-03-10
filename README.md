@@ -1,4 +1,4 @@
-# Note Recognition Distributor
+# Measuring Note Reading Accuracy
 
 This program is a semi-automated method of creating and tracking a piano student's reading accuracy by note. Below, I explain the problem, the solution, and how to use this program. 
 

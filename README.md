@@ -24,6 +24,8 @@ Students/Copy-Treble.csv
 Students/Copy-Bass.csv
 ```
 
+Necessary packages can be found in [requirements.txt](requirements.txt). Install them with `pip`. 
+
 Download these files manually or clone the repository. If you're running this with a new individual, run the program with the following command: `python main.py create student_name treble`, or replace `treble` with `bass` to start with the bass clef. To run the program again, or using a student's pre-compiled data, use the command `python main.py student_name treble`. Or, of course, `bass`. 
 
 Open the simulation website and follow along, entering the correct answer and whether it was inputted correctly. Once you have completed the number of questions you indicated in the program's prompt, it will automatically append the data to any preexisting files, create a new file if their file doesn't exist, and then create a distribution plot. The plot is saved to a `Graphs/` subdirectory with the format `student_name-Treble.png`. Or, of course, `Bass`. 

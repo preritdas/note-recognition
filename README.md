@@ -24,7 +24,7 @@ Students/Copy-Treble.csv
 Students/Copy-Bass.csv
 ```
 
-Necessary packages can be found in [requirements.txt](requirements.txt). Install them with `pip`. 
+Necessary packages can be found in [requirements.txt](requirements.txt). Install them with `python -m pip install -r requirements.txt`, ideally within a virtual environment. 
 
 Download these files manually or clone the repository. If you're running this with a new individual, run the program with the following command: `python main.py create student_name treble`, or replace `treble` with `bass` to start with the bass clef. To run the program again, or using a student's pre-compiled data, use the command `python main.py student_name treble`. Or, of course, `bass`. 
 
